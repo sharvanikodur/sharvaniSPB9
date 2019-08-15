@@ -55,11 +55,35 @@ import com.training.utility.DriverFactory;
 		@Test
 		public void registerid() throws InterruptedException {
 			
+			
+			
 			String name1 = addcartPOM.validatename();
 			System.out.println(name1);
 			addcartPOM.clickmaroontshirt();
 			addcartPOM.sendsize(5);
 			addcartPOM.clickaddtocart();
+			addcartPOM.clickonmycart();
+			addcartPOM.viewmycart();
+		
+		 //String expecteddetails1 =addcartPOM.imageofshirtdetails();
+		 //System.out.println(expecteddetails1); 
+		  
+		 String shirtdetailsprint =addcartPOM.shirtdetails(); 
+		 System.out.println(shirtdetailsprint); 
+		 String shirtdetailschest = addcartPOM.chestshirtdetails();
+		 System.out.println(shirtdetailschest);
+		 
+		 String modelshirt = addcartPOM.modelshirtdetails();
+		  System.out.println(modelshirt); String quantityofshirts =
+		 addcartPOM.quantityshirtdetails(); System.out.println(quantityofshirts);
+		 String unitpricedetails= addcartPOM.unitpriceshirtdetails();
+		 System.out.println("The unit price of shirt is " +unitpricedetails); 
+		 String finpricedet =addcartPOM.finalcartpricedetails(); System.out.println(finpricedet);
+		 
+			addcartPOM.clickcheckout();
+			String finalmess=addcartPOM.checkoutmessage();
+			System.out.println("The final amount is "+finalmess);
+			
 			
 			
 			

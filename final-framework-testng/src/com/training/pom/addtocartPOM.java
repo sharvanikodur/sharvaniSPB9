@@ -35,7 +35,7 @@ import org.openqa.selenium.support.ui.Select;
 		@FindBy(xpath="//*[@id=\"cart\"]/button")
 		private WebElement cartbutton;
 		
-		@FindBy(xpath="//*[@id=\"cart\"]/ul/li[2]/div/p/a[1]/strong")
+		@FindBy(xpath="//*[text()=' View Cart'][1]")
 		private WebElement viewcart;
 		
 		@FindBy(xpath="//*[@id=\"content\"]/form/div/table/tbody/tr/td[1]/a/img")
@@ -44,10 +44,10 @@ import org.openqa.selenium.support.ui.Select;
 		@FindBy(linkText="Regular T-Shirt (Maroon)")
 		private WebElement shirtdetails;
 		
-		@FindBy(linkText="Chest Size: 30")
+		@FindBy(xpath="//*[@id=\"content\"]/form/div/table/tbody/tr/td[2]/small")
 		private WebElement chestsizedetails;
 		
-		@FindBy(xpath="TBSM-4th-8th STD")
+		@FindBy(className="form-control")
 		private WebElement modeldetails;
 		
 		@FindBy(xpath="//*[@id=\"content\"]/form/div/table/tbody/tr/td[4]/div/input")
@@ -121,7 +121,7 @@ import org.openqa.selenium.support.ui.Select;
 		public String unitpriceshirtdetails() {
 			return this.unitpricedetails.getText();
 		}
-		public String finalpriceshirtdetails() {
+		public String finalcartpricedetails() {
 			return this.finalpricedetails.getText();
 		}
 		public void clickcheckout() {
@@ -132,6 +132,9 @@ import org.openqa.selenium.support.ui.Select;
 		public String checkoutmessage() {
 			return this.checkoutmessage.getText();
 		}
+		
+		
+		
 		
 		
 		

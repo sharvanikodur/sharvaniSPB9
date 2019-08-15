@@ -23,7 +23,7 @@ import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 import org.testng.annotations.DataProvider;
 
-	public class sample{
+	public class testcase1{
 		private WebDriver driver;
 		private String baseUrl;
 		private dataproviderPOM daproPOM;
